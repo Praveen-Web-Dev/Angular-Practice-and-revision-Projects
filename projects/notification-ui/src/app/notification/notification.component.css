@@ -1,0 +1,31 @@
+.info{
+    border-left: 5px solid #0d6efd;
+    background-color: #0d6efd;
+}
+.warn{
+    border-left: 5px solid #ffc107;
+    background-color: #ffc107;
+}
+.danger{
+    border-left: 5px solid #dc3545;
+    background-color: #dc3545;
+}
+.success{
+    border-left: 5px solid #198754;
+    background-color: #198754;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
