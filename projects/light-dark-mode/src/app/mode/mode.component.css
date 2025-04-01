@@ -1,0 +1,29 @@
+.btn {
+    padding: 12px 24px;
+    border-radius: 14px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark Mode Button */
+  .dark-mode .btn {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .dark-mode .btn:hover {
+    background-color: #cccccc;
+  }
+  
+  /* Light Mode Button */
+  .light-mode .btn {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  .light-mode .btn:hover {
+    background-color: #333333;
+  }
+  

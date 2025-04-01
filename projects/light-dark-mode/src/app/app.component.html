@@ -1,0 +1,6 @@
+<div class="bg-container">
+  <div class="container" [ngClass]="isDarkMode?'dark-mode':'light-mode'">
+    <h1>Click To change</h1>
+    <app-mode (toggle)="toggleMode()"></app-mode>
+  </div>
+</div>
