@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="heading">Counter</h1>
+    <p class="count">{{ count }}</p>
+    <div>
+      <button class="button" (click)="increment()">Increase</button>
+      <button class="button" (click)="decrement()" [disabled]="count === 0">Decrease</button>
+    </div>
+    <h2>{{ ErrorMessage}}</h2>
+
+  </div>
+  
