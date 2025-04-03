@@ -1,0 +1,17 @@
+<div class="bg-container">
+    <div class="container">
+        <h1 class="heading">Show/Hide</h1>
+        <div class="btn-container">
+            <div>
+                <button class="btn" (click)="toggleFirstName()">Show/Hide FirstName</button>
+                <p class="card" *ngIf="showFirstName">Joe</p>
+            </div>
+            <div>
+                <button class="btn" (click)="toggleLastName()">Show/Hide LastName</button>
+                <p class="card" *ngIf="showLastName">Davis</p>
+            </div>
+        </div>
+        
+            
+        </div>
+    </div>
