@@ -1,0 +1,8 @@
+<div class="bg-container">
+    <div class="container">
+        <app-message [message]="DisplayMessage"></app-message>
+        <app-login *ngIf="!isLogin" (onLogin)="toggleLogin()"></app-login>
+        <app-logout *ngIf="isLogin" (onLogout)="toggleLogin()"></app-logout>
+
+    </div>
+</div>

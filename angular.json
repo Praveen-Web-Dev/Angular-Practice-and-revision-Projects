@@ -912,6 +912,97 @@
           }
         }
       }
+    },
+    "loginToggleApp": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/login-toggle-app",
+      "sourceRoot": "projects/login-toggle-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/login-toggle-app",
+            "index": "projects/login-toggle-app/src/index.html",
+            "main": "projects/login-toggle-app/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/login-toggle-app/tsconfig.app.json",
+            "assets": [
+              "projects/login-toggle-app/src/favicon.ico",
+              "projects/login-toggle-app/src/assets"
+            ],
+            "styles": [
+              "projects/login-toggle-app/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "loginToggleApp:build:production"
+            },
+            "development": {
+              "browserTarget": "loginToggleApp:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "loginToggleApp:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/login-toggle-app/tsconfig.spec.json",
+            "assets": [
+              "projects/login-toggle-app/src/favicon.ico",
+              "projects/login-toggle-app/src/assets"
+            ],
+            "styles": [
+              "projects/login-toggle-app/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
